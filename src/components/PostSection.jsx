@@ -12,7 +12,7 @@ const EMPTY_POST = {
   title: "",
   content: "",
   writerId: "",
-  password: "",
+  password: ""  ,
 };
 
 function PostSection() {
