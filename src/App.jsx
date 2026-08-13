@@ -22,7 +22,7 @@ function App() {
         <div className="server-badge" title=".env.local의 VITE_API_BASE_URL 값입니다.">
           <span className="server-dot" />
           <div>
-            <small>크크크배고파밥줘</small>
+            <small>너도?아나도</small>
             <strong>{API_BASE_URL}</strong>
           </div>
         </div>
