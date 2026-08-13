@@ -1,0 +1,23 @@
+package com.example.membercrud.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+/**
+ * React 개발 서버(localhost:5173)에서 Spring Boot(localhost:8095) API를 호출할 수 있게 허용하는 예제입니다.
+ *
+ * Console에 "blocked by CORS policy" 오류가 있을 때 확인하세요.
+ */
+@Configuration
+public class CorsConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry
+            .addMapping("/api/**")
+            .allowedOrigins("http://localhost:5173")
+            .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+            .allowedHeaders("*");
+    }
+}
